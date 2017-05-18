@@ -1,0 +1,124 @@
+body.menu-open{
+  overflow-y: hidden;
+}
+
+body.sign-up-open{
+  /* Small devices (tablets, 768px and up) */
+  @media (max-width: 768px) {
+    overflow-y: hidden;
+  }
+}
+
+.slick-slider{
+  .slick-slide{
+    outline: none;
+  }
+  .slick-prev{
+    left: -125px;
+    &:before{
+      content: '';
+      display: inline-block;
+      width: 32px;
+      height: 60px;
+      background: url(../images/arrow-left.png) no-repeat center;
+    }
+  }
+  .slick-next{
+    right: -125px;
+    &:before{
+      content: '';
+      display: inline-block;
+      width: 32px;
+      height: 60px;
+      background: url(../images/arrow-right.png) no-repeat center;
+    }
+  }
+  .slick-dots{
+    bottom: -40px;
+     li{
+       button{
+         &:before{
+           font-size: 10px;
+           opacity: .3;
+           color: $white;
+         }
+       }
+       &.slick-active{
+         button{
+           &:before{
+             color: $red-1;
+           }
+         }
+       }
+     }
+   }
+  &.news-items-slider{
+    .slick-dots{
+      li{
+        button{
+          &:before{
+            color: $gray-9;
+          }
+        }
+        &.slick-active{
+          button{
+            &:before{
+              color: $red-1;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.testimonials-slider{
+    .slick-prev{
+      left: -31px;
+    }
+    .slick-next{
+      right: -21px;
+    }
+  }
+}
+
+.main-wrapper {
+  margin-top: $main-header-height-mobile;
+  .banner-wrapper{
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .banner-content{
+      flex: 1;
+      text-align: center;
+      h2{
+        text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+        color: $white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 34px;
+        font-weight: 500;
+        letter-spacing: -2px;
+      }
+    }
+  }
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+  }
+
+  /* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+
+  }
+
+  /* Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    margin-top: $main-header-height;
+    .banner-wrapper{
+      min-height: 300px;
+      .banner-content{
+        h2{
+          font-size: 54px;
+        }
+      }
+    }
+  }
+}
